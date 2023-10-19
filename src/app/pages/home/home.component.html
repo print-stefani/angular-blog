@@ -1,0 +1,18 @@
+<app-menu-title></app-menu-title>
+
+<div class="container__articles">
+
+  <div class="articles__main">
+    <app-big-card id="{{ result[0].idContent }}" photoCover="{{ result[0].photoCover }}"
+      titleContent="{{ result[0].titleContent }}"
+      descriptionContent="{{ result[0].descriptionContent }}"></app-big-card>
+  </div>
+
+  <div class="articles__others">
+
+    <app-small-card *ngFor="let index of result.slice(1)" id="{{ index.idContent }}" photoCover="{{ index.photoCover }}"
+      titleContent="{{ index.titleContent }}"></app-small-card>
+
+  </div>
+
+</div>
